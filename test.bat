@@ -1,14 +1,15 @@
-::块数量
-set blocks=3000
-::冗余率%
-set redundancy=3
-::恢复文件数量
-set recovery_files=4
+@echo off
+setlocal
 
-set previous_path=E:\galgame
+set "input="
+set /p input=Enter a string: 
 
-set file_name=name
+if "%input%"=="" (
+    set "input=Default string value"
+)
 
-par2j64 c /fo /sn%blocks% /rr%redundancy% /rf%recovery_files% /ri %previous_path%\tmp\file_name *
+echo The final string is: %input%
+
+endlocal
 
 pause
