@@ -2,7 +2,9 @@
 
 分享模板：
 
-用7z解压缩,.par
+文件名，压缩密码
+
+用[7-Zip](https://sparanoid.com/lab/7z/)解压缩，par是冗余文件，用于压缩文件7z损坏时修复，使用[MultiPar: Parchive tool (github.com)](https://github.com/Yutaka-Sawada/MultiPar)软件进行修复。
 
 
 
