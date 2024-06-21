@@ -31,7 +31,7 @@ if "%output_path%"=="" (
 
 
 ::分卷大小
-set size=1g
+set size=3.9g
 ::压缩等级，9为最高压缩率，默认为5
 set x=9
 ::-mhe加密文件名
@@ -45,7 +45,7 @@ set blocks=3000
 ::冗余度%。冗余度高其实不如直接多重备份
 set redundancy=3
 ::恢复文件数量
-set recovery_files=4
+set recovery_files=1
 ::*是对所有文件进行处理
 par2j64 c /sn%blocks% /rr%redundancy% /rf%recovery_files% %output_path%\%file%\%file% *
 
