@@ -4,7 +4,7 @@
 
 文件名，压缩密码
 
-用[7-Zip](https://sparanoid.com/lab/7z/)解压缩，par是冗余文件，用于压缩文件7z损坏时修复，使用[MultiPar: Parchive tool (github.com)](https://github.com/Yutaka-Sawada/MultiPar)软件进行修复。
+用[7-Zip](https://sparanoid.com/lab/7z/)解压缩，par2是冗余文件，用于压缩文件7z损坏时修复，使用[MultiPar: Parchive tool (github.com)](https://github.com/Yutaka-Sawada/MultiPar)软件进行修复。
 
 
 
@@ -12,10 +12,10 @@
 
 multipar添加恢复记录
 
-准备工作：
+## 准备工作
 
 - 安装python
-- 安装7z和multipar。且将7z和multipar文件夹路径添加到环境变量中，可以使用命令行进行操作。
+- 安装7z和multipar。win10要将7z和multipar文件夹路径添加到环境变量中，可以使用命令行进行操作。
 
 随机文件名+随机密码
 
@@ -27,3 +27,6 @@ multipar添加恢复记录
 
 7z命令行参数在程序文件夹里有
 
+## 待开发功能
+
+- linux环境下，利用bypy全自动整个过程：加密、冗余、上传
