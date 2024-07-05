@@ -4,8 +4,8 @@ import random
 import time
 
 
-class LinuxBackup:
-    execute_7z = "~/7z/7zzs"  # 7z执行文件路径
+class WindowBackup:
+    execute_7z = "7z"  # 7z执行文件路径
     size = "3.9g"  # 分卷大小
     folder_path = ""  # 文件夹路径
     folder_name = ""  # 文件夹名
@@ -23,18 +23,18 @@ class LinuxBackup:
         :param segment_flag: 是否分卷
         """
         self.folder_path = folder_path
-        self.folder_name = folder_path.split("/")[-1]
+        self.folder_name = folder_path.split("\\")[-1]
         self.output_path = output_path
         command = [self.execute_7z, "a"]
         if len(self.output_path) == 0:
             # 如果为空，则输出放到要压缩的文件夹的上级
-            self.output_path = "/".join(folder_path.split("/")[:-1])
+            self.output_path = "\\".join(folder_path.split("\\")[:-1])
         # 当前时间
         now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
-        self.output_path = self.output_path + "/" + self.folder_name + "_" + now + ".7z"
+        self.output_path = self.output_path + "\\" + self.folder_name + "_" + now + ".7z"
         print("output_path: " + self.output_path)
-        command.append(self.output_path)
-        command.append(self.folder_path)
+        command.append("\"" + self.output_path + "\"")
+        command.append("\"" + self.folder_path + "\"")
         if password_flag:
             self.password = self.generateRandomString()
             command.append("-p" + self.password)
