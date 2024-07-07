@@ -26,7 +26,7 @@ class WindowBackup:
         self.folder_name = folder_path.split("\\")[-1]
         self.output_path = output_path
         command = [self.execute_7z, "a"]
-        if len(self.output_path) == 0:
+        if not isinstance(self.output_path, str) or len(self.output_path) == 0:
             # 如果为空，则输出放到要压缩的文件夹的上级
             self.output_path = "\\".join(folder_path.split("\\")[:-1])
         # 当前时间

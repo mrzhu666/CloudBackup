@@ -4,5 +4,5 @@ window:
     output_path: D:\OneDrive - mail2.gdut.edu.cn\备份\anki
 linux:
   self-hosted:
-    folder_path:
-    output_path:
+    folder_path: ~/Self-Hosted
+    output_path: 
