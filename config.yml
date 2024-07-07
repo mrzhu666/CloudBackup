@@ -1,0 +1,8 @@
+window:
+  anki:
+    folder_path: C:\Users\mrzhu\AppData\Roaming\Anki2
+    output_path: D:\OneDrive - mail2.gdut.edu.cn\备份\anki
+linux:
+  self-hosted:
+    folder_path:
+    output_path:
